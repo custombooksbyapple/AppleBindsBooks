@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Apple Binds Books</title>
+  <meta name="description" content="Get in touch with Apple Binds Books to inquire about a listing or request a custom rebind commission.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-main">Apple Binds Books</span>
+        <span class="logo-sub">Custom Rebinding</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Shop</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <h1>Get in Touch</h1>
+    <p>Questions, inquiries, or commission requests — I'd love to hear from you</p>
+  </section>
+
+  <!-- ===== CONTACT CONTENT ===== -->
+  <main>
+    <div class="section">
+      <div class="contact-grid">
+
+        <!-- LEFT: Info -->
+        <div class="contact-info">
+          <h3>Let's Talk Books</h3>
+          <p>
+            Whether you're interested in a listing from the shop, want to commission a custom rebind, or just have a question, feel free to reach out. I read every message personally and aim to reply within 1–2 business days.
+          </p>
+
+          <div class="contact-detail">
+            <span class="detail-icon">✉</span>
+            <div class="detail-text">
+              <strong>Email</strong>
+              <a href="mailto:custombooksbyapple@gmail.com">custombooksbyapple@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <span class="detail-icon">⏱</span>
+            <div class="detail-text">
+              <strong>Response Time</strong>
+              Usually within 1–2 business days
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <span class="detail-icon">📦</span>
+            <div class="detail-text">
+              <strong>Commissions</strong>
+              Currently accepting new commissions
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; padding: 1.25rem; background: var(--warm-white); border: 1px solid var(--border); border-radius: var(--radius-lg);">
+            <p style="font-family: Arial, sans-serif; font-size: 0.85rem; color: var(--text-muted); margin: 0;">
+              <strong style="color: var(--brown-mid); display: block; margin-bottom: 0.4rem;">Tip for commissions:</strong>
+              Include a photo or description of your book, its condition, and any style preferences (materials, colors, binding type). The more detail, the faster I can give you an accurate quote.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="contact-form">
+          <form id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Jane" required>
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Smith">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">What's this about?</label>
+              <select id="subject" name="subject">
+                <option value="" disabled selected>Select a topic…</option>
+                <option value="shop-inquiry">Inquiring about a shop listing</option>
+                <option value="custom-commission">Requesting a custom commission</option>
+                <option value="shipping">Shipping question</option>
+                <option value="general">General question</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="listing-field" style="display:none;">
+              <label for="listing-ref">Which listing are you interested in?</label>
+              <input type="text" id="listing-ref" name="listing-ref" placeholder="e.g. Listing Title or URL">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your book, your project, or your question…" required></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+
+            <p class="form-note">Your message goes directly to my inbox. No bots, no auto-replies — just me.</p>
+          </form>
+
+          <!-- Success message (hidden by default) -->
+          <div id="form-success" style="display:none; text-align:center; padding: 2rem 1rem;">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">✓</div>
+            <h3 style="color: var(--brown-dark); margin-bottom: 0.5rem;">Message Sent!</h3>
+            <p style="font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--text-muted);">Thank you for reaching out. I'll be in touch within 1–2 business days.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">Apple Binds Books</div>
+      <ul class="footer-nav">
+        <li><a href="index.html">Shop</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Apple Binds Books. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('main-nav').classList.toggle('open');
+    }
+    document.querySelectorAll('#main-nav a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('main-nav').classList.remove('open');
+      });
+    });
+
+    // Show/hide listing field based on subject
+    document.getElementById('subject').addEventListener('change', function() {
+      var listingField = document.getElementById('listing-field');
+      listingField.style.display = this.value === 'shop-inquiry' ? 'block' : 'none';
+    });
+
+    // Pre-fill from URL param (e.g. ?item=listing-2)
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var item = params.get('item');
+      if (item) {
+        var sel = document.getElementById('subject');
+        sel.value = 'shop-inquiry';
+        document.getElementById('listing-field').style.display = 'block';
+        document.getElementById('listing-ref').value = item;
+      }
+    })();
+
+    // Form submission — builds a mailto link so messages go straight to email
+    function handleSubmit(e) {
+      e.preventDefault();
+      var form = document.getElementById('contact-form');
+
+      var fname   = document.getElementById('fname').value.trim();
+      var lname   = document.getElementById('lname').value.trim();
+      var email   = document.getElementById('email').value.trim();
+      var subject = document.getElementById('subject');
+      var subjectText = subject.options[subject.selectedIndex].text;
+      var listingRef = document.getElementById('listing-ref').value.trim();
+      var message = document.getElementById('message').value.trim();
+
+      if (!fname || !email || !message) {
+        alert('Please fill in your name, email, and message before sending.');
+        return;
+      }
+
+      var body = 'From: ' + fname + ' ' + lname + '\n'
+               + 'Reply-to: ' + email + '\n'
+               + 'Topic: ' + subjectText + '\n'
+               + (listingRef ? 'Listing: ' + listingRef + '\n' : '')
+               + '\n'
+               + message;
+
+      var mailtoLink = 'mailto:custombooksbyapple@gmail.com'
+        + '?subject=' + encodeURIComponent('[Apple Binds Books] ' + subjectText)
+        + '&body=' + encodeURIComponent(body);
+
+      window.location.href = mailtoLink;
+
+      // Show success UI after a brief delay
+      setTimeout(function() {
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      }, 600);
+    }
+  </script>
+
+</body>
+</html>
