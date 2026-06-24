@@ -5,8 +5,8 @@ import { useState } from "react";
 const PRODUCTS = [
   {
     id: 1,
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
+    title: "A Court of Thorns and Roses Series",
+    author: "Sarah J. Maas",
     tagline: "Jazz-age glamour in hand-dyed Japanese silk",
     coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
     badge: "Sold",
